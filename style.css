@@ -5,15 +5,134 @@
     border: none !important;
 }
 
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* This is the main rebate Modal */
+
+.display-rebate-modal {
+    animation: displayModal .5s ease-in-out normal forwards;
+    -webkit-animation: displayModal .5s ease-in-out normal forwards;
+}
+
+@keyframes displayModal {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+}
+
+.hide-rebate-modal {
+    animation: hideModal .5s ease-in-out normal forwards;
+    -webkit-animation: hideModal .5s ease-in-out normal forwards;
+}
+
+@keyframes hideModal {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+    }
+}
+
+
+/* This is the rebate modal content */
+
+.display-rebate-modal-content {
+    animation: displayModalContent .8s ease-in-out normal forwards;
+    -webkit-animation: displayModalContent .8s ease-in-out normal forwards;
+}
+
+@keyframes displayModalContent {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+}
+
+.hide-rebate-modal-content {
+    animation: hideModalContent 1.5s ease-in-out normal forwards;
+    -webkit-animation: hideModalContent 1.5s ease-in-out normal forwards;
+}
+
+@keyframes hideModalContent {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+    }
+}
+
+
+/* This is the main content */
+
 .rebate-modal-container {
     width: 100%;
     height: 100vh;
+    position: fixed;
     background-color: rgba(0, 0, 0, 0.701);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
     border: 1px solid green;
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
 }
 
 .rebate-modal-exit-icon-container {
@@ -24,7 +143,6 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    top: 0;
 }
 
 .rebate-modal-exit-icon-box {
@@ -138,6 +256,30 @@
     border: none !important;
     padding: 15px 0 !important;
     font-size: .9rem;
+}
+
+.rebate-modal-btn-container {
+    width: 20%;
+    background-color: #f7150d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.rebate-modal-btn-container>a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 0;
+    text-transform: uppercase;
 }
 
 @media only screen and (max-height:700px) {
